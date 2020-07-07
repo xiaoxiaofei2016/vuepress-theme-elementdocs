@@ -1,26 +1,25 @@
 {
   "name": "vuepress-theme-antdocs",
-  "title": "AntDocs of VuePress",
-  "version": "1.1.1",
-  "description": "An Ant Design style theme for VuePress.",
+  "title": "ElementDocs of VuePress",
+  "version": "1.0.0",
+  "description": "An Element-ui style theme for VuePress.",
   "main": "index.js",
   "keywords": [
     "theme",
     "vuepress",
     "vuepress-theme",
-    "antd",
-    "antdocs",
-    "ant-design"
+    "elementUI",
+    "elementdocs",
+    "element-ui"
   ],
-  "author": "Feng L.H.",
+  "author": "Du Fajun",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zpfz/vuepress-theme-antdocs.git"
+    "url": "git+https://github.com/xiaoxiaofei2016/vuepress-theme-elementdocs"
   },
   "bugs": {
-    "url": "https://github.com/zpfz/vuepress-theme-antdocs/issues"
+    "url": "https://github.com/xiaoxiaofei2016/vuepress-theme-elementdocs/issues"
   },
-  "homepage": "http://antdocs.seeyoz.cn",
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-active-header-links": "^1.5.0",
@@ -30,8 +29,6 @@
     "core-js": "^2.6.11",
     "docsearch.js": "^2.5.2",
     "element-ui": "^2.13.2",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
     "lodash": "^4.17.15",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.1",
