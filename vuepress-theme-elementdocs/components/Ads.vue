@@ -8,23 +8,24 @@
       </div>
       <!-- Ads state 2 -->
       <div v-else-if="data.style === 2" id="ads_2">
-        <a-carousel autoplay :autoplaySpeed="data.speed || 3000">
+        <el-carousel autoplay :interval="data.speed || 3000">
           <div v-for="(item, index) in data.items" :key="index">
             <a :href="item.link" target="_blank" rel="noopener noreferrer">
               <img :src="item.image" :title="item.text" />
             </a>
           </div>
-        </a-carousel>
+        </el-carousel>
       </div>
       <!-- Ads state 3 -->
       <div v-else id="ads_3">
         <div class="ads_title">{{ data.title || 'Sponsor' }}</div>
-        <a-button type="primary" ghost @click="popupInfo">{{
+        <el-button type="primary" plain @click="popupInfo">{{
           data.btnText || 'Become a Sponsor'
-        }}</a-button>
+        }}</el-button>
       </div>
     </div>
-    <a-divider v-if="data" dashed id="reset-margin" />
+    <!-- <el-divider v-if="data" dashed id="reset-margin" /> -->
+    <div id="reset-margin" v-if="data"></div>
   </div>
 </template>
 
@@ -90,6 +91,9 @@ export default {
 }
 
 #reset-margin {
+  height: 1px;
+  background: linear-gradient(to right, #000000, #000000 2px, transparent 2px, transparent);
+  background-size: 4px 100%;
   margin: 5px 0;
 }
 

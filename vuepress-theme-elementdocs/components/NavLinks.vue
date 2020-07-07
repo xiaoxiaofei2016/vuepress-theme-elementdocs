@@ -1,17 +1,17 @@
 <template>
   <nav v-if="userLinks.length || repoLink" class="nav-links">
-    <a-menu :mode="currentStyle" id="nav" v-model="currentPage" :selectable="false">
+    <el-menu :mode="currentStyle" id="nav" v-model="currentPage">
       <template v-for="item in userLinks">
-        <a-sub-menu v-if="item.type === 'links'" :key="link(item.link)">
+        <el-submenu v-if="item.type === 'links'" :key="link(item.link)">
           <span slot="title">
             {{ item.text }}
           </span>
           <template v-for="(subItem, index) in item.items">
-            <a-menu-item-group :title="subItem.text" v-if="subItem.type === 'links'" :key="link(subItem.link) || index">
+            <a-menu-item-group v-if="subItem.type === 'links'" :key="link(subItem.link) || index">
               <a-menu-item v-for="childSubItem in subItem.items" :key="link(childSubItem.link)">
                 <a v-if="isExtlink(childSubItem.link)" :href="childSubItem.link" target="_blank" rel="noopener noreferrer">
                   {{ childSubItem.text }}
-                  <a-icon type="link" />
+                  <i class="el-icon-link" />
                 </a>
                 <RouterLink v-else :to="link(childSubItem.link)">
                   {{ childSubItem.text }}
@@ -21,27 +21,27 @@
             <a-menu-item :key="link(subItem.link)" v-else>
               <a v-if="isExtlink(subItem.link)" :href="subItem.link" target="_blank" rel="noopener noreferrer">
                 {{ subItem.text }}
-                <a-icon type="link" />
+                <i class="el-icon-link" />
               </a>
               <RouterLink v-else :to="link(subItem.link)">
                 {{ subItem.text }}
               </RouterLink>
             </a-menu-item>
           </template>
-        </a-sub-menu>
+        </el-submenu>
         <a-menu-item :key="link(item.link)" v-else>
           <a v-if="isExtlink(item.link)" :href="link(item.link)" target="_blank">
             {{ item.text }}
-            <a-icon type="link" />
+            <i class="el-icon-link" />
           </a>
           <RouterLink v-else :to="link(item.link)">
             {{ item.text }}
           </RouterLink>
         </a-menu-item>
       </template>
-    </a-menu>
+    </el-menu>
     <a v-if="repoLink" :href="repoLink" class="repo-link" target="_blank" rel="noopener noreferrer">
-      <a-icon :type="repoLabel" />
+      <i class="el-icon-connection"></i>
     </a>
   </nav>
 </template>

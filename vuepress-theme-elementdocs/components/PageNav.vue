@@ -9,7 +9,7 @@
         </a>
 
         <RouterLink v-else class="prev" :to="prev.path">
-          <a-icon type="left" />
+          <i class="el-icon-arrow-left"></i>
           {{ prev.title || prev.path }}
         </RouterLink>
       </span>
@@ -23,7 +23,7 @@
 
         <RouterLink v-else :to="next.path">
           {{ next.title || next.path }}
-          <a-icon type="right" />
+          <i class="el-icon-arrow-right"></i>
         </RouterLink>
       </span>
     </p>

@@ -1,8 +1,8 @@
 <template>
   <header class="navbar">
-    <a-row>
+    <el-row>
       <SidebarButton />
-      <a-col :xs="24" :sm="24" :md="6" :lg="5" :xl="5" :xxl="4">
+      <el-col :xs="24" :sm="24" :md="6" :lg="5" :xl="5" :xxl="4">
         <RouterLink :to="$localePath" :class="{'no-logo': !$site.themeConfig.logo ? true : false,'home-link': true}">
           <img v-if="$site.themeConfig.logo" class="logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle" />
           <span v-if="$siteTitle" ref="siteName" class="site-name">{{ $siteTitle }}</span>
@@ -11,20 +11,20 @@
           v-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"
           class="mobile-search"
         />
-      </a-col>
-      <a-col :xs="0" :sm="0" :md="18" :lg="19" :xl="19" :xxl="20">
+      </el-col>
+      <el-col :xs="0" :sm="0" :md="18" :lg="19" :xl="19" :xxl="20">
         <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
         <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
         <NavLinks class="can-hide" />
-      </a-col>
-    </a-row>
+      </el-col>
+    </el-row>
 
-    <a-drawer
-      placement="left"
-      :closable="false"
+    <el-drawer
+      direction="ltr"
+      show-close="false"
       @close="isOpenDrawer"
       :visible="sidebar_visible"
-      wrapClassName="sidebarWrap"
+      custom-class="sidebarWrap"
       v-if="isLoad"
     >
       <div slot="handle">
@@ -33,7 +33,7 @@
         </div>
       </div>
       <Sidebar :items="sidebarItems" class="mobile-sidebar"></Sidebar>
-    </a-drawer>
+    </el-drawer>
   </header>
 </template>
 

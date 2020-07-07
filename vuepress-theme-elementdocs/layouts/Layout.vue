@@ -37,7 +37,7 @@
       </template>
     </Page>
 
-    <a-back-top v-if="$themeConfig.backToTop"/>
+    <el-backtop v-if="$themeConfig.backToTop"/>
   </div>
 </template>
 

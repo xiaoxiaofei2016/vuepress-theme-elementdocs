@@ -1,16 +1,16 @@
 <template>
   <div class="sidebar-button" @click="showSidebar">
-    <a-icon type="bars" />
-    <a-popover
+    <i class="el-icon-menu"></i>
+    <el-popover
       placement="bottomRight"
       trigger="click"
       v-model="popover_visible"
-      overlayClassName="reset-popover"
+      popper-class="reset-popover"
     >
       <div slot="content">
         <NavLinks />
       </div>
-    </a-popover>
+    </el-popover>
   </div>
 </template>
 

@@ -26,7 +26,7 @@
     <p v-else class="sidebar-heading" :class="{ open }" @click="$emit('toggle')">
       <span>{{ item.title }}</span>
       <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'">
-        <a-icon type="down" />
+        <i class="el-icon-arrow-down"></i>
       </span>
     </p>
 

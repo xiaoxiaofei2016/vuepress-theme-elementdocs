@@ -1,5 +1,6 @@
 import store from './store';
-import Antd from 'ant-design-vue';
+// import Antd from 'ant-design-vue';
+import ElementUI from 'element-ui'
 import './styles/index.scss';
 
 export default ({
@@ -9,5 +10,5 @@ export default ({
   siteData,
 }) => {
   Vue.mixin({ store })
-  Vue.use(Antd)
+  Vue.use(ElementUI)
 }

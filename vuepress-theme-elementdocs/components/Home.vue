@@ -2,32 +2,42 @@
   <div>
     <main class="home" aria-labelledby="main-title">
       <header class="hero">
-        <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
+        <img
+          v-if="data.heroImage"
+          :src="$withBase(data.heroImage)"
+          :alt="data.heroAlt || 'hero'"
+          class="hero-logo"
+        />
 
-        <h1 v-if="data.heroText !== null" id="main-title">
-          {{ data.heroText || $title || 'Hello' }}
-        </h1>
+        <h1 v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
 
-        <p v-if="data.tagline !== null" class="description">
-          {{ data.tagline || $description || 'Welcome to your VuePress site' }}
-        </p>
+        <p
+          v-if="data.tagline !== null"
+          class="description"
+        >{{ data.tagline || $description || 'Welcome to your VuePress site' }}</p>
 
-        <a-button type="primary" shape="round" size="large" ghost v-if="data.actionText && data.actionLink">
-          <a v-if="isExtlink(data.actionLink)" :href="link(data.actionLink)" target="_blank">
-            {{ data.actionText }}
-          </a>
-          <RouterLink v-else :to="link(data.actionLink)">
-            {{ data.actionText }}
-          </RouterLink>
-        </a-button>
-        <a-button type="primary" shape="round" size="large" ghost v-if="data.preactionText && data.preactionLink" class="pre-btn">
-          <a v-if="isExtlink(data.preactionLink)" :href="link(data.preactionLink)" target="_blank">
-            {{ data.preactionText }}
-          </a>
-          <RouterLink v-else :to="link(data.preactionLink)">
-            {{ data.preactionText }}
-          </RouterLink>
-        </a-button>
+        <el-button type="primary" round plain v-if="data.actionText && data.actionLink">
+          <a
+            v-if="isExtlink(data.actionLink)"
+            :href="link(data.actionLink)"
+            target="_blank"
+          >{{ data.actionText }}</a>
+          <RouterLink v-else :to="link(data.actionLink)">{{ data.actionText }}</RouterLink>
+        </el-button>
+        <el-button
+          type="primary"
+          round
+          plain
+          v-if="data.preactionText && data.preactionLink"
+          class="pre-btn"
+        >
+          <a
+            v-if="isExtlink(data.preactionLink)"
+            :href="link(data.preactionLink)"
+            target="_blank"
+          >{{ data.preactionText }}</a>
+          <RouterLink v-else :to="link(data.preactionLink)">{{ data.preactionText }}</RouterLink>
+        </el-button>
       </header>
 
       <div v-if="data.features && data.features.length" class="features">
@@ -41,22 +51,34 @@
     </main>
     <div v-if="data.footer" class="footer">
       <div v-if="data.footerWrap && data.footerWrap.length" class="footer-container">
-        <a-row :gutter="{ md: 0,lg:32 }" type="flex" justify="space-around" class="add-bottom">
-          <a-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6" v-for="(footerWrap, index) in data.footerWrap" :key="index">
+        <el-row :gutter="gutter" type="flex" justify="space-around" class="add-bottom">
+          <el-col
+            :xs="24"
+            :sm="24"
+            :md="6"
+            :lg="6"
+            :xl="6"
+            v-for="(footerWrap, index) in data.footerWrap"
+            :key="index"
+          >
             <div>
               <h2>{{ footerWrap.headline }}</h2>
               <div class="footer-item" v-for="(item, index) in footerWrap.items" :key="index">
-                <a :href="item.link" target="_blank" v-if="item.title && item.title !== null">
-                  {{ item.title }}
-                </a>
+                <a
+                  :href="item.link"
+                  target="_blank"
+                  v-if="item.title && item.title !== null"
+                >{{ item.title }}</a>
                 <span class="footer-item-separator" v-if="item.details && item.details !== null">-</span>
-                <span class="footer-item-description" v-if="item.details && item.details !== null">{{
+                <span class="footer-item-description" v-if="item.details && item.details !== null">
+                  {{
                   item.details
-                }}</span>
+                  }}
+                </span>
               </div>
             </div>
-          </a-col>
-        </a-row>
+          </el-col>
+        </el-row>
       </div>
       <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
     </div>
@@ -71,7 +93,8 @@ export default {
 
   data() {
     return {
-      isDivider: false
+      isDivider: false,
+      fullWidth: document.documentElement.clientWidth
     }
   },
   methods:{
@@ -84,12 +107,19 @@ export default {
       let _url = ensureExt(url)
       _url = _url.length === 5 && _url === '.html' ? '' : _url
       return _url
-    }
+    },
+    handleResize () {
+      this.fullWidth = document.documentElement.clientWidth
+    },
   },
   mounted() {
     if (this.data.footerWrap && this.data.footerWrap.length) {
       this.isDivider = true
     }
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize)
   },
   computed: {
     data() {
@@ -117,13 +147,20 @@ export default {
           console.error('footerColumn needs to be set and cannot be 0 or empty')
         }
       }
+    },
+    gutter() {
+      if (this.fullWidth >= 1200 && this.fullWidth <= 1920) {
+        return 32
+      } else {
+        return 0
+      }
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import '../styles/palette.scss';
+@import "../styles/palette.scss";
 
 .home {
   padding: $navbarHeight 2rem 0;
@@ -211,14 +248,14 @@ export default {
     height: 3rem;
     padding: 0 1.5rem;
   }
-  .pre-btn{
-    margin-left: .5rem;
+  .pre-btn {
+    margin-left: 0.5rem;
   }
 }
 
 .footer {
   clear: both;
-  font-size: .875rem;
+  font-size: 0.875rem;
   background-color: #000;
   position: relative;
   color: rgba(255, 255, 255, 0.4);
@@ -236,9 +273,9 @@ export default {
       color: #fff;
       text-align: left;
     }
-    .add-bottom{
-      > div{
-        > div{
+    .add-bottom {
+      > div {
+        > div {
           margin-bottom: 1.875rem;
         }
       }
@@ -281,7 +318,7 @@ export default {
         margin: 2rem auto 1.2rem;
       }
     }
-    
+
     .features {
       flex-direction: column;
     }
@@ -289,7 +326,7 @@ export default {
     .feature {
       max-width: 100%;
       padding: 0 1rem;
-      margin: .5rem auto;
+      margin: 0.5rem auto;
       text-align: center;
     }
   }
@@ -299,10 +336,10 @@ export default {
     h2 {
       text-align: center !important;
     }
-    .add-bottom{
-      > div{
-        &:last-child{
-          > div{
+    .add-bottom {
+      > div {
+        &:last-child {
+          > div {
             margin-bottom: 0;
           }
         }
