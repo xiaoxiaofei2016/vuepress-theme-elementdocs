@@ -104,7 +104,7 @@ function renderExternal (h, to, text) {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/palette.scss';
 
 .sidebar .sidebar-sub-headers {

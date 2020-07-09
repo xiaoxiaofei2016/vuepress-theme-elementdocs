@@ -21,7 +21,7 @@
 
     <el-drawer
       direction="ltr"
-      show-close="false"
+      :show-close="false"
       @close="isOpenDrawer"
       :visible="sidebar_visible"
       custom-class="sidebarWrap"
@@ -92,7 +92,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/palette.scss';
 
 .toggle-sidebar{

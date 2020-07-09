@@ -107,7 +107,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/palette.scss';
 @import "../styles/wrapper.scss";
 .page-edit {

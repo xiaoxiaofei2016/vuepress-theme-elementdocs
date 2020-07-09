@@ -21,12 +21,10 @@ module.exports = (options, ctx) => {
         .rule('scss')
         .oneOf('normal')
         .use('sass-loader')
-        .options({ javascriptEnabled: true })
         .end()
         .end()
         .oneOf('modules')
         .use('sass-loader')
-        .options({ javascriptEnabled: true })
     },
     alias () {
       return {
