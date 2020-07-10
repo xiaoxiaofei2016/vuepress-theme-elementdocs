@@ -1,10 +1,10 @@
-<div align="center"><img src="https://s2.ax1x.com/2020/02/27/3aIcDK.png" height = "150" /></div>
+<div align="center"><img src="https://t9.baidu.com/it/u=3528916773,3720315611&fm=193" height = "150" /></div>
 
 <h1 align="center">ElementUIDocs</h1>
 
 <div align="center">
 
-An ElementUI style theme for VuePress.
+An elementUI style theme for VuePress.
 
 </div>
 
@@ -24,11 +24,11 @@ An ElementUI style theme for VuePress.
 #### Install theme
 
 ```sh
-npm i vuepress-theme-elementuidocs
+npm i vuepress-theme-elementUIdocs
 ```
 or
 ```sh
-yarn add vuepress-theme-elementuidocs
+yarn add vuepress-theme-elementUIdocs
 ```
 
 #### Use theme  
@@ -36,7 +36,7 @@ yarn add vuepress-theme-elementuidocs
 Open your `.vuepress/config.js`, and then add VuePress theme reference code:
 ```js
 module.exports = {
-  theme: 'elementuidocs'
+  theme: 'elementUIdocs'
 }
 ```
 You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-theme.html#theme-shorthand)

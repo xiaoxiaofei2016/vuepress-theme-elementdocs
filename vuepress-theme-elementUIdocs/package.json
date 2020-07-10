@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-elementUIdocs",
   "title": "ElementUIdocs of VuePress",
-  "version": "1.0.8",
+  "version": "1.0.0",
   "description": "An element-ui style theme for VuePress.",
   "main": "index.js",
   "keywords": [
