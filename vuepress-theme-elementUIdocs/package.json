@@ -1,0 +1,42 @@
+{
+  "name": "vuepress-theme-elementUIdocs",
+  "title": "ElementUIdocs of VuePress",
+  "version": "1.0.8",
+  "description": "An element-ui style theme for VuePress.",
+  "main": "index.js",
+  "keywords": [
+    "theme",
+    "vuepress",
+    "vuepress-theme",
+    "elementUI",
+    "elementUIdocs",
+    "element-ui",
+    "sass"
+  ],
+  "author": "Du Fajun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoxiaofei2016/vuepress-theme-elementdocs"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaoxiaofei2016/vuepress-theme-elementdocs/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@vuepress/plugin-active-header-links": "^1.5.0",
+    "@vuepress/plugin-nprogress": "^1.5.0",
+    "@vuepress/plugin-search": "^1.5.0",
+    "ant-design-vue": "^1.5.5",
+    "core-js": "^2.6.11",
+    "css-loader": "^3.6.0",
+    "docsearch.js": "^2.5.2",
+    "element-ui": "^2.13.2",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.1",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-smooth-scroll": "^0.0.9",
+    "vuex": "^3.1.3"
+  }
+}
