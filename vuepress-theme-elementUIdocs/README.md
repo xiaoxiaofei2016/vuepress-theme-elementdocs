@@ -1,6 +1,6 @@
 <div align="center"><img src="https://t9.baidu.com/it/u=3528916773,3720315611&fm=193" height = "150" /></div>
 
-<h1 align="center">ElementUIDocs</h1>
+<h1 align="center">Elementuidocs</h1>
 
 <div align="center">
 
@@ -24,11 +24,11 @@ An elementUI style theme for VuePress.
 #### Install theme
 
 ```sh
-npm i vuepress-theme-elementUIdocs
+npm i vuepress-theme-elementuidocs
 ```
 or
 ```sh
-yarn add vuepress-theme-elementUIdocs
+yarn add vuepress-theme-elementuidocs
 ```
 
 #### Use theme  
@@ -36,7 +36,7 @@ yarn add vuepress-theme-elementUIdocs
 Open your `.vuepress/config.js`, and then add VuePress theme reference code:
 ```js
 module.exports = {
-  theme: 'elementUIdocs'
+  theme: 'elementuidocs'
 }
 ```
 You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-theme.html#theme-shorthand)
