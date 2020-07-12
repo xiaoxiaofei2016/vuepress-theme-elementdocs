@@ -110,7 +110,7 @@ export default {
   color: rgba(0,0,0,.65);
   transition: color 0.15s ease;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   margin: 0.25rem auto;
   padding: 0.35rem 2.2rem;
   width: 100%;

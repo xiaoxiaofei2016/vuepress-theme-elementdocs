@@ -58,7 +58,7 @@ body{
 }
 
 .sidebar {
-  font-size: 14px;
+  font-size: 18px;
   background-color: #fff;
   width: $sidebarWidth - 2;
   position: fixed;
@@ -138,6 +138,10 @@ blockquote {
 
 ul, ol {
   padding-left: 1.2em;
+}
+
+li {
+  list-style: none;
 }
 
 strong {

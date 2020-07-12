@@ -89,7 +89,7 @@ export default {
       background-color: #fff;
       border: 1px solid #999;
       border-radius: 4px;
-      font-size: 16px;
+      font-size: 18px;
       margin: 6px 0 0;
       padding: 4px;
       text-align: left;

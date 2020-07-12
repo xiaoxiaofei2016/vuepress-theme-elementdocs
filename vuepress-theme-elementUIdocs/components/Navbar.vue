@@ -174,7 +174,7 @@ export default {
     height: 40px;
     cursor: pointer;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
     background: #fff;

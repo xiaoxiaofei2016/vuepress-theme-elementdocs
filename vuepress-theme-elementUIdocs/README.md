@@ -39,6 +39,7 @@ module.exports = {
   theme: 'elementuidocs'
 }
 ```
+在styles目录下建立style.scss和palette.scss文件，分别用来自定义样式和自定义颜色样式
 You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-theme.html#theme-shorthand)
 
 # Preview
