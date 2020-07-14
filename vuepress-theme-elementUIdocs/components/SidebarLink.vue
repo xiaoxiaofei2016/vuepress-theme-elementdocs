@@ -120,7 +120,7 @@ function renderExternal (h, to, text) {
 }
 
 a.sidebar-link {
-  font-size: .875rem;
+  font-size: .975rem;
   font-weight: 400;
   display: inline-block;
   color: rgba(0,0,0,.65);
@@ -137,8 +137,8 @@ a.sidebar-link {
     top: 0;
     right: 0;
     bottom: 0;
-    border-right: 3px solid $accentColor;
     transform: scaleY(0.0001);
+    border-right: 0 !important;
     opacity: 0;
     transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
     content: '';

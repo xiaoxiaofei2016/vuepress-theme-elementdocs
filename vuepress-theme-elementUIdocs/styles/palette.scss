@@ -1,15 +1,15 @@
 // colors
-$accentColor: #3eaf7c;
+$accentColor: #3eaf7c !default;
 $primary-color: $accentColor;
 
-$bodyTextColor: rgba(0, 0, 0, 0.8);
-$textColor: #2a2a2a;
-$borderColor: #eaecef;
-$codeBgColor: #282c34;
-$arrowBgColor: #ccc;
-$badgeTipColor: #19be6b;
-$badgeWarningColor: #ff9900;
-$badgeErrorColor: #ed4014;
+$bodyTextColor: rgba(0, 0, 0, 0.8) !default;
+$textColor: #2a2a2a !default;
+$borderColor: #eaecef !default;
+$codeBgColor: #282c34 !default;
+$arrowBgColor: #ccc !default;
+$badgeTipColor: #19be6b !default;
+$badgeWarningColor: #ff9900 !default;
+$badgeErrorColor: #ed4014 !default;
 
 // layout
 $navbarHeight: 4rem;
@@ -20,7 +20,7 @@ $homePageWidth: 960px;
 $navbarLogoHeight: 2.125rem;
 
 // font
-$bodyFontSize: 15px;
+$bodyFontSize: 18px;
 
 // responsive breakpoints
 $MQNarrow: 991px;
@@ -35,5 +35,4 @@ $codeLang: js,ts,html,md,vue,c,css,cpp,sass,scss,less,stylus,go,java,sh,yaml,py,
 $MobileShow: none;
 $AdsStyle1MW: 7.5rem;
 
-// @import (optional) '~@docs/palette.less';
 @import '~@docs/palette.scss';
