@@ -2,14 +2,16 @@
   .custom-block-title {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.2rem;
+    margin-bottom: .2rem;
     margin-top: 1rem;
     color: rgba(0, 0, 0, 0.65);
   }
 
-  &.tip, &.warning, &.danger {
-    padding: 0.1rem 1.5rem;
-    border-left-width: 0.4rem;
+  &.danger,
+  &.tip,
+  &.warning {
+    padding: .1rem 1.5rem;
+    border-left-width: .4rem;
     border-left-style: solid;
     margin: 1rem 0;
   }
@@ -65,7 +67,8 @@
       margin-top: 0;
     }
 
-    figure, p {
+    figure,
+    p {
       &:last-child {
         margin-bottom: 0;
         padding-bottom: 0;

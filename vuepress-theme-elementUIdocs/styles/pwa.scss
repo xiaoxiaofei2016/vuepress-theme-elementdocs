@@ -1,7 +1,7 @@
-.sw-update-popup{
+.sw-update-popup {
   border-color: $accentColor !important;
 
-  button{
+  button {
     line-height: 1.6;
     border: 1px solid transparent;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
@@ -15,8 +15,8 @@
     transition: border-color .25s ease-in-out,color .25s ease-in-out;
     margin-top: .625rem;
 
-    &:hover,
-    &:active{
+    &:active,
+    &:hover {
       border-color: $accentColor;
       color: $accentColor;
     }

@@ -2,13 +2,10 @@
   max-width: $contentWidth;
   margin: 0 auto;
   padding: 0 6rem;
-
   @media (max-width: $MQNarrow) {
     padding: 0 3rem;
   }
-
   @media (max-width: $MQMobileNarrow) {
-    padding: 1.6rem;
-    padding-top: 0;
+    padding: 0 1.6rem 1.6rem;
   }
 }

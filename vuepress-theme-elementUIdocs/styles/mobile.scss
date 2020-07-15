@@ -1,6 +1,6 @@
 @import './config.scss';
 
-$mobileSidebarWidth: $sidebarWidth * 0.82;
+$mobileSidebarWidth: $sidebarWidth * .82;
 
 // narrow desktop / iPad
 @media (max-width: $MQNarrow) {
@@ -24,7 +24,6 @@ $mobileSidebarWidth: $sidebarWidth * 0.82;
     padding-left: 0;
   }
 
-  
   .theme-container {
     &.no-navbar {
       .sidebar {
@@ -33,9 +32,13 @@ $mobileSidebarWidth: $sidebarWidth * 0.82;
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     .#{$contentClass}:not(.custom) > & {
-
       &:first-child {
         margin-top: -($navbarHeight - 5);
       }
