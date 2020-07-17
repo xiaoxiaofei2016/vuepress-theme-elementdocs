@@ -126,7 +126,7 @@ export default {
   .site-name {
     font-size: 1.3rem;
     font-weight: 500;
-    color: $textColor;
+    // color: $textColor;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
@@ -160,10 +160,10 @@ export default {
   }
 }
 .sidebarWrap {
-  .ant-drawer-content-wrapper {
+  .el-drawer-content-wrapper {
     width: $sidebarWidth * 0.82 !important;
   }
-  .ant-drawer-body {
+  .el-drawer-body {
     padding-left: 0;
     padding-right: 0;
   }

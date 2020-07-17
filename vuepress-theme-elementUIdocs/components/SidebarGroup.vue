@@ -122,7 +122,7 @@ export default {
     color: inherit;
   }
   &:hover{
-    color: $accentColor;
+    // color: $accentColor;
   }
 
   .arrow {
@@ -138,7 +138,7 @@ export default {
     }
 
     &:hover {
-      color: $accentColor;
+      // color: $accentColor;
     }
   }
 }

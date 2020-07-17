@@ -56,7 +56,7 @@ export default {
 .reset-popover {
   width: 16rem;
 
-  .ant-popover-inner-content {
+  .el-popover-inner-content {
     padding: 0;
   }
 }

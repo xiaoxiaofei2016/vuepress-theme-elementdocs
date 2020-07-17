@@ -301,8 +301,10 @@ th {
 
    > .el-menu-item:hover,
   > .el-menu-submenu:hover {
-    border-top: 2px solid $accentColor;
-    border-bottom: 2px solid transparent;
+    background-color: transparent;
+
+    // border-top: 2px solid $accentColor;
+    // border-bottom: 2px solid transparent;
   }
 
   > .el-menu-item-selected {
@@ -316,7 +318,7 @@ th {
 }
 
 .el-menu-item {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .el-submenu__title {
@@ -329,6 +331,9 @@ th {
 
 .el-menu-item .is-active {
   border-bottom: none;
+}
+.el-row {
+  margin-bottom: 0;
 }
 @import './mobile.scss';
 // @import (optional) '~@docs/style.less';

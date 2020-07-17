@@ -114,13 +114,13 @@ function renderExternal (h, to, text) {
 
 .sidebar-links {
   > li > a.sidebar-link {
-    margin-top: 0.25rem;
-    line-height: 2;
+    margin-top: 0;
+    // line-height: 2;
   }
 }
 
 a.sidebar-link {
-  font-size: .975rem;
+  font-size: .9rem;
   font-weight: 400;
   display: inline-block;
   color: rgba(0,0,0,.65);
@@ -145,12 +145,12 @@ a.sidebar-link {
   }
 
   &:hover {
-    color: $accentColor;
+    // color: $accentColor;
   }
 
   &.active {
-    color: $accentColor;
-    background-color: fade($accentColor, 10%);
+    // color: $accentColor;
+    // background-color: fade($accentColor, 10%);
 
     &::after {
       transform: scaleY(1);

@@ -191,7 +191,7 @@ export default {
     line-height: $navbarHeight;
 
     &:hover {
-      color: $accentColor;
+      // color: $accentColor;
     }
   }
 }
@@ -204,9 +204,9 @@ export default {
     .repo-link {
       display: none;
     }
-    .ant-menu-inline,
-    .ant-menu-vertical,
-    .ant-menu-vertical-left {
+    .el-menu-inline,
+    .el-menu-vertical,
+    .el-menu-vertical-left {
       border: none;
     }
   }

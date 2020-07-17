@@ -243,7 +243,7 @@ export default {
     }
   }
 
-  .ant-btn-round.ant-btn-lg {
+  .el-btn-round.el-btn-lg {
     font-size: 18px;
     height: 3rem;
     padding: 0 1.5rem;
@@ -287,7 +287,7 @@ export default {
         color: #fff;
       }
       a:hover {
-        color: $accentColor;
+        // color: $accentColor;
       }
       .footer-item-separator {
         margin: 0 0.3em;
